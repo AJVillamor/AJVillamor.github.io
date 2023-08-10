@@ -10,4 +10,15 @@
     document.querySelector(".theme-btn").addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
     })
+    const images = document.querySelectorAll(".image");
+    let currentIndex = 0;
+    
+    function changeImage() {
+        images[currentIndex].classList.remove("active-image");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add("active-image");
+    }
+    
+    const interval = setInterval(changeImage, 5000); // Change image every 3 seconds
+    
 })();
