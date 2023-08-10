@@ -786,7 +786,7 @@ section {
     margin: 0 auto !important;
   }
   .right-header {
-    grid-row: 1;
+    grid-row: 2;
     padding-right: 0rem !important;
     width: 90%;
     margin: 0 auto;
@@ -795,6 +795,9 @@ section {
     font-size: 2.5rem !important;
     text-align: center;
     padding-top: 3rem;
+  }
+  .right-header .btn-con {
+    text-align: center;
   }
 }
 @media screen and (max-width: 700px) {
