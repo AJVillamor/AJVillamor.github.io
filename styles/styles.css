@@ -311,6 +311,10 @@ section {
 .about-container .left-about h4 {
   font-size: 2rem;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+.about-container .left-about h4 span {
+  color: var(--color-secondary);
 }
 
 .about-stats {
@@ -456,6 +460,14 @@ section {
   margin: 1rem 0;
   line-height: 2rem;
 }
+.contact-content-con .left-contact p a:hover {
+  text-decoration: underline;
+  color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
+}
+.contact-content-con .left-contact p a .me {
+  color: var(--color-secondary);
+}
 .contact-content-con .left-contact .contact-info {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -479,6 +491,11 @@ section {
   display: flex;
   justify-content: center;
   font-size: 1.3rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon .mail:hover a {
+  text-decoration: underline;
+  color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
 }
 .contact-content-con .left-contact .contact-icon {
   display: flex;
