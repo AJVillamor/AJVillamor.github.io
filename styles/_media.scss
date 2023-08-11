@@ -48,6 +48,7 @@
         background-color: var(--color-grey-5);
         .control{
             margin: 1rem .3rem;
+            margin: 1rem 1rem 1rem 1rem;
         }
     }
 
@@ -314,11 +315,11 @@
         overflow: auto;
         white-space: normal;
         .right-header{
-            .name {
-                font-size: 50%;
-                span { color: var(--color-secondary); }
+            h1 {
+                font-size: x-large !important;
             }
             p {
+                font-size: small !important;
                 margin: 1.5rem 0;
                 line-height: 2rem;
             }
@@ -327,46 +328,49 @@
     .contact-container{
         margin-bottom: 7rem;
         .contact-content-con{
-            text-align: justify;
-        }
-        .contact-info{ 
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-            .icon{
-                width: 100%;
-                text-align: start;
+            text-align: justify; 
+            .left-contact{
+                p{ font-size: large; }
+                .contact-info{ 
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                    .icon{
+                        font-size: small !important;
+                        span{ font-size: small !important; }
+                        width: 100%;
+                        text-align: start;
+                    }
+                }
             }
         }
     }
     .btn-main-container{
-        width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-        .btn-con{
-            margin-left: .2rem;
-            margin-right: .2rem;
+        grid-template-columns: 1fr;
+        .btn-con {
+          display: flex;
+          flex-direction: column;
+          justify-self: left;
+          padding: 1rem; 
         }
-        //     a{
-        //         font-size: .5rem;
-        //         .btn-con{
-        //             margin-right: 50%;
-        //         }
-        //     }
-        // }
     }
     .about-container{
-        place-items: center;
-        overflow-y: auto;
         .left-about{ 
-            font-size: 70%;
+            overflow-x: auto;
+            white-space: inherit;
             h4{
+                font-size: 22px !important;
                 text-align: justify;
                 font-size: 1.7rem;
             }
             p{
                 text-align: justify;
+                font-size: small !important;
             }
+              
         }
+    }
+    .controls{
+        background-color: transparent;
     }
 }
