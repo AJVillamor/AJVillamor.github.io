@@ -172,7 +172,9 @@
             }
         }
     }
-    
+    .btn-main-container-about{
+        width: 100%;
+    }
 }
 
 
@@ -279,6 +281,27 @@
             }
             .bg-text{
                 font-size: 4rem;
+            }
+        }
+    }
+    .contact-container{
+        margin-bottom: 5rem;
+        .contact-info{ 
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .contact-container{
+        margin-bottom: 7rem;
+        .contact-info{ 
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            .icon{
+                width: 100%;
+                text-align: start;
             }
         }
     }
