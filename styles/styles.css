@@ -578,7 +578,7 @@ section {
   overflow: hidden;
 }
 .main-btn .btn-text {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 .main-btn .btn-icon {
   background-color: var(--color-secondary);
@@ -928,15 +928,13 @@ section {
   }
   .btn-main-container {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
   .btn-main-container .btn-con {
-    width: 100%;
-  }
-  .btn-main-container .btn-con a {
-    font-size: 0.5rem;
-  }
-  .btn-main-container .btn-con a .btn-con {
-    margin-right: 50%;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
   }
   .about-container {
     place-items: center;

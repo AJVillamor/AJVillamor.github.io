@@ -340,15 +340,20 @@
     }
     .btn-main-container{
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
         .btn-con{
-            width: 100%;
-            a{
-                font-size: .5rem;
-                .btn-con{
-                    margin-right: 50%;
-                }
-            }
+            margin-left: .2rem;
+            margin-right: .2rem;
         }
+        //     a{
+        //         font-size: .5rem;
+        //         .btn-con{
+        //             margin-right: 50%;
+        //         }
+        //     }
+        // }
     }
     .about-container{
         place-items: center;
