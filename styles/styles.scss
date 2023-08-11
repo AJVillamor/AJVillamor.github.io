@@ -205,6 +205,7 @@ section {
             span { color: var(--color-secondary); }
         }
         p {
+            text-align: justify;
             margin: 1.5rem 0;
             line-height: 2rem;
         }
@@ -287,6 +288,7 @@ section {
     }
 
     .left-about {
+        text-align: justify;
         padding-right: 5rem;
         p {
             line-height: 2rem;
@@ -418,6 +420,7 @@ section {
 .contact-content-con {
     display: flex;
     padding-top: 3.5rem;
+    text-align: justify;
     .left-contact {
         flex: 2;
         h4 {

@@ -306,3 +306,62 @@
         }
     }
 }
+
+
+@media screen and (max-width:500px){
+    .header-content{
+        text-align: justify;
+        overflow: auto;
+        white-space: normal;
+        .right-header{
+            .name {
+                font-size: 50%;
+                span { color: var(--color-secondary); }
+            }
+            p {
+                margin: 1.5rem 0;
+                line-height: 2rem;
+            }
+        }
+    }
+    .contact-container{
+        margin-bottom: 7rem;
+        .contact-content-con{
+            text-align: justify;
+        }
+        .contact-info{ 
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            .icon{
+                width: 100%;
+                text-align: start;
+            }
+        }
+    }
+    .btn-main-container{
+        width: 100%;
+        .btn-con{
+            width: 100%;
+            a{
+                font-size: .5rem;
+                .btn-con{
+                    margin-right: 50%;
+                }
+            }
+        }
+    }
+    .about-container{
+        place-items: center;
+        overflow-y: auto;
+        .left-about{ 
+            font-size: 70%;
+            h4{
+                text-align: justify;
+                font-size: 1.7rem;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+    }
+}

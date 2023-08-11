@@ -221,6 +221,7 @@ section {
   color: var(--color-secondary);
 }
 .header-content .right-header p {
+  text-align: justify;
   margin: 1.5rem 0;
   line-height: 2rem;
 }
@@ -301,6 +302,7 @@ section {
   background-color: var(--color-grey-5);
 }
 .about-container .left-about {
+  text-align: justify;
   padding-right: 5rem;
 }
 .about-container .left-about p {
@@ -447,6 +449,7 @@ section {
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
+  text-align: justify;
 }
 .contact-content-con .left-contact {
   flex: 2;
@@ -891,5 +894,62 @@ section {
   .contact-container .contact-info .icon {
     width: 100%;
     text-align: start;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-content {
+    text-align: justify;
+    overflow: auto;
+    white-space: normal;
+  }
+  .header-content .right-header .name {
+    font-size: 50%;
+  }
+  .header-content .right-header .name span {
+    color: var(--color-secondary);
+  }
+  .header-content .right-header p {
+    margin: 1.5rem 0;
+    line-height: 2rem;
+  }
+  .contact-container {
+    margin-bottom: 7rem;
+  }
+  .contact-container .contact-content-con {
+    text-align: justify;
+  }
+  .contact-container .contact-info {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .contact-container .contact-info .icon {
+    width: 100%;
+    text-align: start;
+  }
+  .btn-main-container {
+    width: 100%;
+  }
+  .btn-main-container .btn-con {
+    width: 100%;
+  }
+  .btn-main-container .btn-con a {
+    font-size: 0.5rem;
+  }
+  .btn-main-container .btn-con a .btn-con {
+    margin-right: 50%;
+  }
+  .about-container {
+    place-items: center;
+    overflow-y: auto;
+  }
+  .about-container .left-about {
+    font-size: 70%;
+  }
+  .about-container .left-about h4 {
+    text-align: justify;
+    font-size: 1.7rem;
+  }
+  .about-container .left-about p {
+    text-align: justify;
   }
 }/*# sourceMappingURL=styles.css.map */
