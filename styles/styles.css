@@ -591,8 +591,10 @@ section {
   margin: 1rem 0;
   line-height: 2rem;
 }
-.contact-content-con .left-contact p a:hover {
+.contact-content-con .left-contact p a {
   text-decoration: underline;
+}
+.contact-content-con .left-contact p a:hover {
   color: var(--color-secondary);
   text-decoration-color: var(--color-secondary);
 }
@@ -623,8 +625,10 @@ section {
   justify-content: center;
   font-size: 1.3rem;
 }
-.contact-content-con .left-contact .contact-info .contact-item .icon .mail:hover a {
+.contact-content-con .left-contact .contact-info .contact-item .icon .mail a {
   text-decoration: underline;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon .mail:hover a {
   color: var(--color-secondary);
   text-decoration-color: var(--color-secondary);
 }

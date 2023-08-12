@@ -552,8 +552,8 @@ section {
             margin: 1rem 0;
             line-height: 2rem;
             a{
+                text-decoration: underline;
                 &:hover{
-                    text-decoration: underline;
                     color: var(--color-secondary);
                     text-decoration-color: var(--color-secondary);
                 }
@@ -585,9 +585,11 @@ section {
                         font-size: 1.3rem;
                     }
                     .mail{
+                        a{
+                            text-decoration: underline;
+                        }
                         &:hover {
-                            a{  
-                                text-decoration: underline;
+                            a{ 
                                 color: var(--color-secondary);
                                 text-decoration-color: var(--color-secondary);
                             }
