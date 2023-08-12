@@ -19,6 +19,27 @@
     --color-grey-6: #171512  ;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --light-shade1: #cce4f9;
+    --light-shade2: #69c6c6;
+
+    --python-prof: 85%;
+    --cplus-prof: 80%;
+    --javascript-prof: 60%;
+    --java-prof: 55%;
+    --csharp-prof: 50%;
+    --typescript-prof: 30%;
+    --html-prof: 80%;
+    --css-prof: 75%;
+    --git-prof: 72%;
+    --agile-prof: 60%;
+    --windows-prof: 90%;
+    --linux-prof: 53%;
+    --vscode-prof: 95%;
+    --github-prof: 80%;
+    --unity-prof: 40%;
+    --analytical-prof: 78%;
+    --logical-prof: 74%;
+    --sql-prof: 53%;
 }
 .light-mode {
     --color-primary: #cce4f9;
@@ -33,7 +54,10 @@
     --color-grey-4: #224242  ;
     --color-grey-5: #d1d6d6   ;
     --color-grey-6: #112121;
+    --light-shade1: #111111;
+    --light-shade2: #C84B31;
 }
+
 
 // Define your color variables
 $gradient-start-color: var(--color-primary);
@@ -43,13 +67,6 @@ $gradient-end-color: var(--color-primary1);
 @mixin gradient-background($start-color, $end-color) {
   background: linear-gradient(to right, $start-color, $end-color);
 }
-
-//   &:hover {
-//     // You can adjust the hover effect if desired
-//     background: darken($gradient-start-color, 10%);
-//   }
-
-
 body {
     background-color: var(--color-primary);
     // @include gradient-background($gradient-start-color, $gradient-end-color);  
@@ -58,21 +75,18 @@ body {
     color: var(--color-white);
     transition: all .4s ease-in-out;
 }
-
 a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
     font-family: inherit;
 }
-
 header {
     min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
     padding: 0 !important;
 }
-
 section {
     min-height: 100vh;
     width: 100%;
@@ -81,15 +95,12 @@ section {
     top: 0;
     padding: 3rem 18rem;
 }
-
 .container, .image {
     display: none;
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
     @include gradient-background($gradient-start-color, $gradient-end-color);  
 }
-
-
 .active{
     background-color: inherit;
     display: block;
@@ -100,7 +111,6 @@ section {
         100%{ transform: translateY(0) scaleY(1); }
     }
 }
-
 .active-image {
     display: block;
     animation: appear .3s ease-in-out;
@@ -135,7 +145,14 @@ section {
         justify-content: center;
         align-items: center;
         margin: .7rem 0;
-        box-shadow: var(--box-shadow-1) ;
+        box-shadow: 0 0 5px var(--color-primary);
+        &:hover {
+            transform: scale(1);
+            // transition-delay: .2s;
+            box-shadow: 0 0 10px var(--color-secondary),
+              0 0 20px var(--color-secondary),
+              0 0 30px var(--color-secondary);
+        }
         i {
             font-size: 1.2rem;
             color: var(--color-grey-2);
@@ -148,7 +165,6 @@ section {
         i { color: var(--color-white); }
     }
 }
-
 .theme-btn {
     top: 5%;
     right: 3%;
@@ -161,16 +177,36 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,.3);
     transition: all .1s ease-in-out;
     &:active{ transform: translateY(-3px); }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 1;
+        right: 1;
+        width: 25%;
+        height: 25%;
+        z-index: -1;
+    }
+    &:hover {
+        transition: all 1s ease-out;
+        &::before {
+            border-radius: 50%;
+            background: var(--light-shade1);
+            transform: translateX(0);
+            transition: all 1s ease-out;
+            box-shadow: 0 0 70px var(--light-shade2),
+              0 0 30px var(--light-shade2),
+              0 0 60px var(--light-shade2),
+              0 0 90px var(--light-shade2);
+        }
+    }
     i{
         font-size: 1.4rem;
         color: var(--color-grey-2);
         pointer-events: none;
     }
 }
-
 
 /*Header-content*/
 .header-content {
@@ -230,23 +266,10 @@ section {
         }
     }
 }
-
 .btn-main-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    a{ 
-        white-space: nowrap;
-        font-size: 75%;
-        text-align: center;
-    } 
-}
-
-.btn-main-container-about{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    width: 120%;
     a{ 
         white-space: nowrap;
         font-size: 75%;
@@ -270,6 +293,7 @@ section {
             border-radius: 5px;
             transition: all .4s ease-in-out;
             box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            max-height: max-content;
             &:hover {
                 cursor: default;
                 transform: translateY(-5px);
@@ -292,15 +316,6 @@ section {
                     font-size: 1.2rem;
                     color: var(--color-grey-1);
                     letter-spacing: 2px;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        top: 15px;
-                        width: 2rem;
-                        height: 2px;
-                        background-color: var(--color-grey-5);
-                    }
                 }
             }
         }
@@ -324,53 +339,132 @@ section {
         }
     }
 }
-
 .about-stats {
     padding-bottom: 4rem;
-    .progress-bars {
+    .skills-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-        .progress-bar {
+        grid-template-rows: repeat(4, 1fr);
+        // background-color: #112121;
+        .soft-dev, .operating-system, .prob-solving, .database{
+            .progress-bars{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+        }
+        .skill-item{
             display: flex;
             flex-direction: column;
-            .prog-title {
-                text-transform: uppercase;
-                font-weight: 500;
+            border: 1px solid var(--color-grey-5);
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            margin: 1rem 1rem 1rem 1rem;
+            h4{
+                font-size: 90%;
             }
-            .progress-con {
-                display: flex;
-                align-items: center;
-                .prog-text {
-                    color: var(--color-grey-2);
+            &:hover {
+                cursor: default;
+                transform: translateY(-15px);
+                border: 1px solid var(--color-secondary);
+                box-shadow: 1px 4px 15px var(--color-grey-6);                
+                .prog-lang, .prog-web, .prog-software, .prog-operating, .prog-tools, .prog-problem, .prog-database{
+                    opacity: 1 !important;
+                    transform: translateX(0%) !important;
+                    transition: all .8s ease-out; 
                 }
-                .progress {
-                    width: 100%;
-                    height: .45rem;
-                    background-color: var(--color-grey-4);
-                    margin-left: 1rem;
-                    position: relative;
-                    span {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        background-color: var(--color-secondary);
-                        transition: all .4s ease-in-out;
-                        width: 60%;
+            }
+            .progress-bars {
+                display: flex;
+                flex-direction: column;
+                grid-gap: 1rem;
+                padding-left: 5%;
+                padding-right: 5%;
+                padding-bottom: 5%;
+                flex-grow: 1;
+                justify-content: center;
+                .progress-bar {
+                    font-size: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    .prog-title {
+                        text-transform: uppercase;
+                        font-weight: 500;
                     }
-                    .c { width: 80%; }
-                    .java { width: 55%; }
-                    .js { width: 60%; }
-                    .cs{ width: 50%; }
-                    .python{ width: 85%; }
-                    .ts{ width: 30%; }
+                    .progress-con {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        .prog-text {
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            z-index: 1;
+                            transform: translateX(-50%);
+                            color: var(--color-grey-2);
+                            visibility: hidden;
+                        }
+                        .progress {
+                            width: 100%;
+                            height: .45rem;
+                            margin-top: .3rem;
+                            background-color: var(--color-grey-4);
+                            position: relative;
+                            overflow: hidden;
+                            span {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 100%;
+                                background-color: var(--color-secondary);
+                                transform: translateX(-101%);
+                                transition: all .4s ease-out; 
+                            }
+                            .c { width: var(--cplus-prof); }
+                            .java { width: var(--java-prof); }
+                            .js { width: var(--javascript-prof); }
+                            .cs{ width: var(--csharp-prof); }
+                            .python{ width: var(--python-prof); }
+                            .html{ width: var(--html-prof); }
+                            .css{ width: var(--css-prof); }
+                            .ts{ width: var(--typescript-prof); }
+                            .git { width: var(--git-prof); }
+                            .agile { width: var(--agile-prof); }
+                            .windows { width: var(--windows-prof); }
+                            .linux { width: var(--linux-prof); }
+                            .vscode { width: var(--vscode-prof); }
+                            .github { width: var(--github-prof); }
+                            .unity { width: var(--unity-prof); }
+                            .analytical { width: var(--analytical-prof); }
+                            .logical { width: var(--logical-prof); }
+                            .sql { width: var(--sql-prof); }
+
+                        }
+                    }
                 }
             }
         }
     }
+
 }
 .stat-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40%;
+        height: 1px;
+        background-color: var(--color-grey-5);
+        transform: translateX(-50%);
+    }
+}
+.divider{
     text-transform: uppercase;
     font-size: 1.4rem;
     text-align: center;
@@ -387,6 +481,13 @@ section {
         transform: translateX(-50%);
     }
 }
+// .prog-languages{
+//     &:hover{
+//         .prog-lang{
+//             visibility: visible;
+//         }
+//     }
+// }
 
 /*Timeline*/
 .timeline {
@@ -556,7 +657,6 @@ section {
         }
     }
 }
-
 
 /*Independed components*/
 .btn-con {

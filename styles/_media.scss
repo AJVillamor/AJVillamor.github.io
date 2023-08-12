@@ -352,6 +352,10 @@
               
         }
     }
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 }
 
 @media screen and (max-width:1000px){
@@ -363,7 +367,6 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    // background-color: var(--color-grey-5);
     background-color: transparent;
     .control{
         margin: 1rem .3rem;
