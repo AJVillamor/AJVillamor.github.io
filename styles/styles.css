@@ -22,24 +22,24 @@
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
   --light-shade1: #cce4f9;
   --light-shade2: #69c6c6;
-  --python-prof: 85%;
-  --cplus-prof: 80%;
-  --javascript-prof: 60%;
-  --java-prof: 55%;
-  --csharp-prof: 50%;
-  --typescript-prof: 30%;
+  --python-prof: 65%;
+  --cplus-prof: 70%;
+  --javascript-prof: 40%;
+  --java-prof: 35%;
+  --csharp-prof: 25%;
+  --typescript-prof: 13%;
   --html-prof: 80%;
   --css-prof: 75%;
-  --git-prof: 72%;
+  --git-prof: 62%;
   --agile-prof: 60%;
-  --windows-prof: 90%;
-  --linux-prof: 53%;
-  --vscode-prof: 95%;
-  --github-prof: 80%;
-  --unity-prof: 40%;
-  --analytical-prof: 78%;
-  --logical-prof: 74%;
-  --sql-prof: 53%;
+  --windows-prof: 80%;
+  --linux-prof: 33%;
+  --vscode-prof: 85%;
+  --github-prof: 70%;
+  --unity-prof: 23%;
+  --analytical-prof: 68%;
+  --logical-prof: 57%;
+  --sql-prof: 43%;
 }
 
 .light-mode {
@@ -380,7 +380,7 @@ section {
 .about-stats .skills-container .skill-item:hover .prog-lang, .about-stats .skills-container .skill-item:hover .prog-web, .about-stats .skills-container .skill-item:hover .prog-software, .about-stats .skills-container .skill-item:hover .prog-operating, .about-stats .skills-container .skill-item:hover .prog-tools, .about-stats .skills-container .skill-item:hover .prog-problem, .about-stats .skills-container .skill-item:hover .prog-database {
   opacity: 1 !important;
   transform: translateX(0%) !important;
-  transition: all 0.8s ease-out;
+  transition: all 1s ease-out;
 }
 .about-stats .skills-container .skill-item .progress-bars {
   display: flex;
