@@ -19,6 +19,22 @@
         images[currentIndex].classList.add("active-image");
     }
     
-    const interval = setInterval(changeImage, 5000); // Change image every 3 seconds
+    setInterval(changeImage, 5000);
     
 })();
+
+function displayCalculator() {
+    const calcElement = document.getElementById('calc');
+    calcElement.style.display = 'flex';
+    calcElement.style.flexirection = 'row';
+    calcElement.style.justifyContent = 'center';
+    document.getElementById('hide-components').style.visibility = 'visible';
+    document.getElementById('portfolio-items').style.display = 'none';
+}
+
+function HideComponents(){
+    const calcElement = document.getElementById('calc');
+    document.getElementById('hide-components').style.visibility = 'hidden';
+    document.getElementById('portfolio-items').style.display = 'grid';
+    calcElement.style.display = 'none';
+}

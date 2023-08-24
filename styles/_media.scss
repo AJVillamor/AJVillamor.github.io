@@ -161,6 +161,7 @@
     .btn-main-container-about{
         width: 100%;
     }
+    
 }
 
 @media screen and (max-width:1250px){
@@ -202,6 +203,12 @@
                 font-size: 4.5rem;
             }
         }
+    }
+    
+    .portfolio-items{ 
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 5rem;
     }
 }
 
@@ -355,7 +362,29 @@
     .skills-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr) !important;
-    }
+    } 
+    .portfolio-content{
+        padding-top: -5rem;
+        h1{
+            grid-column: 1 / span 10;  
+            white-space: nowrap;
+        }  
+        .portfolio-items{ 
+            grid-template-columns: repeat(1, 1fr) !important;
+            column-gap: 3rem !important;
+            row-gap: 5rem;
+            .portfolio-item{
+                width: inherit !important;
+                height: 150px !important;
+                .large-text{
+                    font-size: large !important;
+                }
+                .small-text{
+                    font-size: small !important;
+                }
+            }
+        }
+    } 
 }
 
 @media screen and (max-width:1000px){

@@ -40,6 +40,7 @@
   --analytical-prof: 68%;
   --logical-prof: 57%;
   --sql-prof: 43%;
+  --react-prof: 45%;
 }
 
 .light-mode {
@@ -486,6 +487,9 @@ section {
 .about-stats .skills-container .skill-item .progress-bars .progress-bar .progress-con .progress .sql {
   width: var(--sql-prof);
 }
+.about-stats .skills-container .skill-item .progress-bars .progress-bar .progress-con .progress .react {
+  width: var(--react-prof);
+}
 
 .stat-title {
   text-transform: uppercase;
@@ -762,6 +766,91 @@ section {
   transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+  white-space: nowrap;
+}
+
+.portfolio-container .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.portfolio-container .portfolio-content .hide {
+  grid-row: 1/span 1 !important;
+  margin-top: 5rem;
+}
+.portfolio-container .portfolio-content h1 {
+  grid-column: 1/span 6;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  position: relative;
+  align-self: center;
+}
+.portfolio-container .portfolio-content .portfolio-items {
+  grid-row: 2/span 4;
+  grid-column: 1/span 12;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  row-gap: 5rem;
+}
+.portfolio-container .portfolio-content .portfolio-items .portfolio-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+}
+.portfolio-container .portfolio-content .portfolio-items .portfolio-item .abt-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.portfolio-container .portfolio-content .portfolio-items .portfolio-item .abt-text .large-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.portfolio-container .portfolio-content .portfolio-items .portfolio-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.portfolio-container .portfolio-content .portfolio-items .calculator:hover {
+  background-image: url(../images/calculator.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-in-out;
+  opacity: 0.3;
+}
+.portfolio-container .portfolio-content #hide-components {
+  visibility: hidden;
+  background-color: transparent;
+  border-width: 1px;
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+  grid-row: 2/span 1;
+  grid-column: 12/span 1;
+  z-index: 1;
+  color: var(--color-white);
+  font-size: large;
+}
+.portfolio-container .portfolio-content #hide-components:hover {
+  background-color: var(--color-secondary);
+}
+.portfolio-container .portfolio-content #calc {
+  display: none;
+  grid-row: 2/span 4;
+  grid-column: 1/span 12;
+}
+.portfolio-container .portfolio-content #calc #calc-item {
+  height: 500px;
 }
 
 .about-container .left-about p {
@@ -938,6 +1027,12 @@ section {
   .main-title h2 .bg-text {
     font-size: 4.5rem;
   }
+  .portfolio-items {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 5rem;
+  }
 }
 @media screen and (max-width: 970px) {
   .container {
@@ -1076,6 +1171,29 @@ section {
   .skills-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .portfolio-content {
+    padding-top: -5rem;
+  }
+  .portfolio-content h1 {
+    grid-column: 1/span 10;
+    white-space: nowrap;
+  }
+  .portfolio-content .portfolio-items {
+    grid-template-columns: repeat(1, 1fr) !important;
+    -moz-column-gap: 3rem !important;
+         column-gap: 3rem !important;
+    row-gap: 5rem;
+  }
+  .portfolio-content .portfolio-items .portfolio-item {
+    width: inherit !important;
+    height: 150px !important;
+  }
+  .portfolio-content .portfolio-items .portfolio-item .large-text {
+    font-size: large !important;
+  }
+  .portfolio-content .portfolio-items .portfolio-item .small-text {
+    font-size: small !important;
   }
 }
 @media screen and (max-width: 1000px) {
