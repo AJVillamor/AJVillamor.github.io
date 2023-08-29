@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/calculator.css">
+        <script src="../js/calculator.js"> </script>
+        <title>Mini Calculator</title>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="top-div">
+                <h5 class="calculator-title">Basic Calculator *</h5>
+                <div class="screen">
+                    <p id="screen-res">0</p>
+                </div>
+            </div>
+            <div class="bot-div">
+                <div class="buttons-left-div">
+                    <div class="left-row row-1">
+                        <button class="calculator-btns" id="clear-btn" onclick="Clear()">c</button>
+                        <button class="calculator-btns" id="division-btn" onclick="SendVal(' / ')">/</button>
+                        <button class="calculator-btns" id="multiply-btn" onclick="SendVal(' * ')">*</button>
+                    </div>
+                    <div class="left-row row-2">
+                        <button class="calculator-btns number" id="seven-btn" onclick="SendVal(7)">7</button>
+                        <button class="calculator-btns number" id="eigth-btn" onclick="SendVal(8)">8</button>
+                        <button class="calculator-btns number" id="nine-btn" onclick="SendVal(9)">9</button>
+                    </div>
+                    <div class="left-row row-3">
+                        <button class="calculator-btns number" id="four-btn" onclick="SendVal(4)">4</button>
+                        <button class="calculator-btns number" id="five-btn" onclick="SendVal(5)">5</button>
+                        <button class="calculator-btns number" id="six-btn" onclick="SendVal(6)">6</button>
+                    </div>
+                    <div class="left-row row-4">
+                        <button class="calculator-btns number" id="one-btn" onclick="SendVal(1)">1</button>
+                        <button class="calculator-btns number" id="two-btn" onclick="SendVal(2)">2</button>
+                        <button class="calculator-btns number" id="three-btn" onclick="SendVal(3)">3</button>
+                    </div>
+                    <div class="left-row row-5">
+                        <button class="calculator-btns number" id="zero-btn" onclick="SendVal(0)">0</button>
+                        <button class="calculator-btns" id="delete-btn" onclick="BackSpace()">del</button>
+                    </div>
+                </div>
+                <div class="buttons-right-div">
+                    <button class="calculator-btns" id="minus-btn" onclick="SendVal(' - ')">-</button>
+                    <button class="calculator-btns" id="plus-btn" onclick="SendVal(' + ')">+</button>
+                    <button class="calculator-btns" id="equal-btn" onclick="GetVal()">=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
