@@ -40,6 +40,7 @@
     --analytical-prof: 68%;
     --logical-prof: 57%;
     --sql-prof: 43%;
+    --mongodb-prof: 40%;
     --react-prof: 45%;
 }
 .light-mode {
@@ -439,6 +440,7 @@ section {
                             .analytical { width: var(--analytical-prof); }
                             .logical { width: var(--logical-prof); }
                             .sql { width: var(--sql-prof); }
+                            .mongodb { width: var(--mongodb-prof); }
                             .react {width: var(--react-prof);}
                         }
                     }

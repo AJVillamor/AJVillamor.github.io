@@ -40,6 +40,7 @@
   --analytical-prof: 68%;
   --logical-prof: 57%;
   --sql-prof: 43%;
+  --mongodb-prof: 40%;
   --react-prof: 45%;
 }
 
@@ -486,6 +487,9 @@ section {
 }
 .about-stats .skills-container .skill-item .progress-bars .progress-bar .progress-con .progress .sql {
   width: var(--sql-prof);
+}
+.about-stats .skills-container .skill-item .progress-bars .progress-bar .progress-con .progress .mongodb {
+  width: var(--mongodb-prof);
 }
 .about-stats .skills-container .skill-item .progress-bars .progress-bar .progress-con .progress .react {
   width: var(--react-prof);
