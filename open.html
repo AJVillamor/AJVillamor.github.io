@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Link on Button Click</title>
+</head>
+<body>
+    <p>This is some content on the page.</p>
+
+    <!-- Button that, when clicked, will open the link -->
+    <button id="openLinkButton">Open Link</button>
+
+    <script>
+        // Define the URL you want to open
+        var urlToOpen = "https://ajvillamor.github.io/Personal-Portfolio/";
+
+        // Get a reference to the button element
+        var openLinkButton = document.getElementById("openLinkButton");
+
+        // Function to open the URL in a new tab
+        function openLink() {
+            window.open(urlToOpen); // Opens in a new tab or window
+        }
+
+        // Attach a click event listener to the button
+        openLinkButton.addEventListener("click", openLink);
+    </script>
+</body>
+</html>

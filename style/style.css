@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #e6baa3;
+  --secondary-color: #e4debe;
+  --text-color: #e91e63;
+  --choices-btn-color: #e91e63;
+  --choices-text-color: #e4debe;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.invitation-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 0.5fr 3fr 0.5fr;
+  background-color: var(--secondary-color);
+  height: 300px;
+  width: 500px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.invitation-container .left-div {
+  display: flex;
+}
+.invitation-container .center-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.invitation-container .right-div {
+  display: flex;
+}
+
+.gif-1 {
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.state-btn:hover {
+  font-size: x-large;
+}
+
+button#no:hover {
+  order: -1;
+}
+
+button#next {
+  order: 1;
+}
+
+button#previous {
+  order: -1;
+}
+
+.choices-btn {
+  background-color: var(--choices-btn-color);
+  color: var(--choices-text-color);
+  text-transform: uppercase;
+  width: 80px;
+}
+
+.gif-1 {
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */

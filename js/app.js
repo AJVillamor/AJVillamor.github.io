@@ -1,40 +1,39 @@
-(function () {
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
-        })
-    });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    })
-    const images = document.querySelectorAll(".image");
-    let currentIndex = 0;
-    
-    function changeImage() {
-        images[currentIndex].classList.remove("active-image");
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add("active-image");
-    }
-    
-    setInterval(changeImage, 5000);
-    
-})();
+let currentStep = 1;
 
-function displayCalculator() {
-    const calcElement = document.getElementById('calc');
-    calcElement.style.display = 'flex';
-    calcElement.style.flexirection = 'row';
-    calcElement.style.justifyContent = 'center';
-    document.getElementById('hide-components').style.visibility = 'visible';
-    document.getElementById('portfolio-items').style.display = 'none';
+function showNextMessage(nextContainerId) {
+  const currentContainer = document.getElementById(
+    `invitation-container-${currentStep}`
+  );
+  currentContainer.classList.add("hidden");
+
+  if (currentStep < 3) {
+    currentStep++;
+    const nextContainer = document.getElementById(nextContainerId);
+    nextContainer.classList.remove("hidden");
+  }
 }
 
-function HideComponents(){
-    const calcElement = document.getElementById('calc');
-    document.getElementById('hide-components').style.visibility = 'hidden';
-    document.getElementById('portfolio-items').style.display = 'grid';
-    calcElement.style.display = 'none';
+function showPreviousMessage(previousContainerId) {
+  if (currentStep > 1) {
+    const currentContainer = document.getElementById(
+      `invitation-container-${currentStep}`
+    );
+    currentContainer.classList.add("hidden");
+
+    currentStep--;
+    const previousContainer = document.getElementById(previousContainerId);
+    previousContainer.classList.remove("hidden");
+  }
+}
+
+function confirmAttendance(response) {
+  if (response === "yes") {
+    alert(
+      "Thank you for accepting the invitation! Looking forward to our special day together."
+    );
+  } else if (response === "no") {
+    alert(
+      "I understand. If you change your mind, feel free to reach out. Happy Valentine's Day!"
+    );
+  }
 }
