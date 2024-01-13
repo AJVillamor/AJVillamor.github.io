@@ -28,12 +28,7 @@ function showPreviousMessage(previousContainerId) {
 
 function confirmAttendance(response) {
   if (response === "yes") {
-    alert(
-      "Thank you for accepting the invitation! Looking forward to our special day together."
-    );
-  } else if (response === "no") {
-    alert(
-      "I understand. If you change your mind, feel free to reach out. Happy Valentine's Day!"
-    );
+    document.getElementById("invitation-container-3").classList.add("hidden");
+    document.getElementById("response").classList.remove("hidden");
   }
 }
