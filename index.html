@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="favicon.png" type="image/png" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -62,7 +63,7 @@
         </button>
       </div>
       <div class="center-div">
-        <h1>I just wanna ask you</h1>
+        <h1>I just wanted to ask</h1>
       </div>
       <div class="right-div">
         <button
@@ -94,11 +95,7 @@
           >
             Yes
           </button>
-          <button
-            class="choices-btn"
-            id="no"
-            onclick="confirmAttendance('yes')"
-          >
+          <button class="choices-btn" id="no" onclick="confirmAttendance('no')">
             No
           </button>
         </div>
@@ -109,10 +106,7 @@
     <div class="invitation-container hidden" id="response">
       <div class="left-div"></div>
       <div class="center-div">
-        <h1>
-          Thank you for accepting the invitation!<br />
-          See you on Feb. 14.
-        </h1>
+        <h1 id="messResp"></h1>
       </div>
       <div class="right-div"></div>
     </div>

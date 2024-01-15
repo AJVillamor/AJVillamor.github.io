@@ -30,5 +30,12 @@ function confirmAttendance(response) {
   if (response === "yes") {
     document.getElementById("invitation-container-3").classList.add("hidden");
     document.getElementById("response").classList.remove("hidden");
+    document.getElementById("messResp").innerHTML =
+      "Yey! <br />See you on Feb. 14.";
+  } else if (response === "no") {
+    document.getElementById("invitation-container-3").classList.add("hidden");
+    document.getElementById("response").classList.remove("hidden");
+    document.getElementById("messResp").innerHTML =
+      "Bawal mag 'no' <br />See you on Feb. 14!";
   }
 }
